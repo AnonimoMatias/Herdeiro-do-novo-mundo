@@ -1,0 +1,8 @@
+public abstract boolean usar(Sobrevivente alvo) {
+        int vida = alvo.getHealthPoints();
+        if (vida <= 0 || vida >= 100) {
+            return false;
+        }
+        alvo.setHealthPoints(vida + cura);
+        return true;
+    }
