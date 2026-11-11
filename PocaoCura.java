@@ -1,25 +1,23 @@
-public class PocaoCura extends consumables{
-    private final int cura = 25;
+public class PocaoCura extends Consumables{
+    private int cura = 25;
 
     public PocaoCura ( String id, String name, int StackMax, boolean consumables, String efeito, int cura) {
         super(id, name, StackMax, consumables, efeito);
         this.cura = cura;
     }
 
-    @Override 
-    public boolean usar(Sobrevivente alvo) {
-        int vida = alvo.getHealthPoints();
-        if (vida <= 0 || vida >= 100) {
-            return false;
-        }
-        alvo.setHealthPoints(vida + cura);
-        return true;
+    public void getinformencion(){
+       IO.println(getName()); 
+       IO.println(getStackMax()); 
+       IO.println(isConsumables());
     }
 
-    public void getinformencion(){
-       IO.println(getname); 
-       IO.println(getStackMax); 
-       IO.println(getconsumables);
+
+    @Override
+    public int usar() {
+        return cura;
     }
+
+  
     
 }

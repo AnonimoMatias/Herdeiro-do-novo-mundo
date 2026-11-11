@@ -2,7 +2,7 @@ public abstract class Item{
     private final String id;
     private final String name;
     private final int StackMax;
-    private booleam consumables;
+    private boolean  consumables;
 
     public Item (String id, String name, int StackMax, boolean consumables) {
         this.id = id;
@@ -11,12 +11,22 @@ public abstract class Item{
         this.consumables = consumables;
     }
 
-    public abstract usar();
+    public String getName() {
+        return name;
+    }
 
-    public abstract void getnome();
+    public String getId() {
+        return id;
+    }
 
-    public abstract void getStackMax();
+    public int getStackMax() {
+        return StackMax;
+    }
 
-    public abstract void getconsumables();
+    public boolean isConsumables() {
+        return consumables;
+    }
+
+    public abstract int usar();   
 
 }

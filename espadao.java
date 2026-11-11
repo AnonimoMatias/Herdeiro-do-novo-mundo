@@ -1,24 +1,28 @@
-public class espadao extends Weapon {
+public class Espadao extends Weapon {
     private String skillName = "Ábobora Voadora";
 
-    public espadao(String id, String name, int StackMax, boolean consumables, int damageBase, int damageVariance,
+    public Espadao(String id, String name, int StackMax, boolean consumables, int damageBase, int damageVariance,
             int hitChance, int criticalChance, boolean hasSkill, int upgrade, String skillName) {
         super(id, name, StackMax, consumables, damageBase, damageVariance, hitChance, criticalChance, hasSkill,
                 upgrade);
         this.skillName = skillName;
     }
 
-    @Override
 
-    public boolean hasSkill() {
+    public void getinformencion() {
+        IO.println(getName());
+        IO.println(getStackMax());
+    }
+
+
+    @Override
+    public boolean haveskill() {
         return true;
     }
 
-    public void usar() {
-    }
 
-    public void getinformencion() {
-        IO.println(getname);
-        IO.println(getStackMax);
+    @Override
+    public int usar() {
+       return ataque();
     }
 }

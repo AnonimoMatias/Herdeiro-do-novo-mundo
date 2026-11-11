@@ -33,8 +33,8 @@ public abstract class Sobrevivente {
         }
     }
 
-    public void usar(Sobrevivente alvo) {
-            alvo.setHealthPoints(alvo.getHealthPoints() + cura);
+    public void usar(PocaoCura cura) {
+            setHealthPoints(getHealthPoints() + cura.usar());
     }
 
     protected void moverPosicao(int dx, int dy) {
