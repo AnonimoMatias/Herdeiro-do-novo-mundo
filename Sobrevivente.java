@@ -3,7 +3,6 @@ public abstract class Sobrevivente {
     private int HealthPoints = 100;
     protected int posX;
     protected int posY;
-    
 
     public Sobrevivente(String id, int posX, int posY, int HealthPoints) {
         this.id = id;
@@ -34,7 +33,7 @@ public abstract class Sobrevivente {
     }
 
     public void usar(PocaoCura cura) {
-            setHealthPoints(getHealthPoints() + cura.usar());
+        setHealthPoints(getHealthPoints() + cura.usar());
     }
 
     protected void moverPosicao(int dx, int dy) {

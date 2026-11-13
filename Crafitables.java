@@ -1,6 +1,6 @@
 public class Crafitables extends Item {
-    private boolean  consumables;
-    private boolean  crafitables;
+    private boolean consumables;
+    private boolean crafitables;
 
     public Crafitables(String id, String name, int StackMax, boolean crafitables, boolean consumables) {
         super(id, name, StackMax);
@@ -25,5 +25,5 @@ public class Crafitables extends Item {
     public int usar() {
         return 0;
     }
-    
+
 }
